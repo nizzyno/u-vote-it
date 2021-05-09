@@ -18,3 +18,24 @@ Content-Type: application/json
     "last_name": "Firbank",
     "industry_connected": 1
 }
+
+###
+
+GET http://localhost:3001/api/parties
+
+###
+
+GET http://localhost:3001/api/party/1
+
+###
+
+DELETE http://localhost:3001/api/party/1
+
+###
+
+PUT http://localhost:3001/api/candidate/1
+Content-Type: application/json
+
+{
+    "party_id": 5
+}
