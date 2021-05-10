@@ -6,6 +6,20 @@ the foreign key constraint that requires the parties table to exist.*/
 DROP TABLE IF EXISTS candidates;
 DROP TABLE IF EXISTS parties;
 
+/*creates voters table*/
+/*we added a new field, created_at, with a data type of DATETIME. 
+In SQL, a DATETIME field's value will look something like 2020-01-01 13:00:00.
+
+front-end team can take that value, convert it with JavaScript's Date() constructor, 
+and display anything they want at that point.*/
+CREATE TABLE voters (
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
 /* creates parties table */
 /* Note how we used a TEXT data type for 
 description instead of VARCHAR. A party's 
