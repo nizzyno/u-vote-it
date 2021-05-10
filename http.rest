@@ -37,5 +37,37 @@ PUT http://localhost:3001/api/candidate/1
 Content-Type: application/json
 
 {
-    "party_id": 5
+    "party_id": 1
 }
+
+###
+
+GET http://localhost:3001/api/voters
+
+###
+
+GET http://localhost:3001/api/voter/10
+
+###
+
+POST http://localhost:3001/api/localhost:3001/api/voter
+Content-Type: application/json
+{
+    "first_name": "Amiko",
+    "last_name": "Cascade",
+    "email": "amiko@schoolofcss.edu"
+}
+
+###
+
+PUT http://localhost:3001/api/voter/1
+Content-Type: application/json
+
+{
+    "email": "amiko@schoolofcss.edu"
+}
+
+###
+
+DELETE http://localhost:3001/api/voter/1
+
